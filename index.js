@@ -80,6 +80,7 @@ app.post("/initiate-call", (req, res) => {
       token: FCMtoken,
     };
     FCM.send(message, function (err, response) {
+      console.log(response)
       if (err) {
         res.status(200).send(response);
       } else {
